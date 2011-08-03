@@ -1,0 +1,41 @@
+%h4
+  .box Suppose we have User table that have duplicate email records, Use Rails 3 ActiveRecord to write a program to delete duplicated email records that are younger
+
+%h4
+  .clearfix
+    #all_users.notice
+      %table
+        %caption 
+          All user records 
+          %strong before deleting 
+        %tbody
+          %tr
+            %th ID
+            %th Name
+            %th Email
+      
+          = render @users
+        
+    #delete_duplicate.notice
+      %table
+        %caption 
+          All user records 
+          %strong after deleting
+        %tbody
+          %tr
+            %th ID
+            %th Name
+            %th Email
+
+  #new_user
+
+  = link_to "new user", new_user_path(:format => :js), :remote => true, :id => "new_user_link"
+  %br
+  = button_to "delete duplicate", delete_duplicate_path(:format => :js), |
+    :method => :post, :remote => true
+  
+  %br
+    .notice 
+      User.delete_all(["id NOT IN (?)", User.select('min(id) as id').group(:email).map(&:id)])
+  
+  

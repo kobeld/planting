@@ -1,0 +1,66 @@
+%h4
+  .box
+    Do you have a github/google code account? If so, what's your github/google code name?
+  %p 
+    My github account name is 
+    = link_to "kobeld", "https://github.com/kobeld", :target => "_blank"
+    
+  .box
+    What is the Linux Kernel repository address?
+  %p
+    = link_to "Here", "http://github.com/mirrors/linux-2.6", :targe => "_blank"
+    is the Linux kernel repository 
+    
+
+  .box
+    What are the git commands that will be used when committing changes to Linux Kernel source repository?
+
+  1. Fork the "Linux Kernel" repository in Github.
+
+  %p 
+  2. Clone the remote "Linux Kernel" project to local machine.
+  .notice
+    $ git clone git@github.com:kobeld/linux-2.6.git
+    %br
+    $ cd linux-2.6.git
+
+  %p 
+  3. Add remote configuration
+  .notice
+    $ git remote add upstream git://github.com/mirrors/linux.git
+
+  %p
+  4. Before modifying, create and switch to a new branch
+  .notice
+    $ git checkout -b modified-linux
+
+  %p
+  5. Commit changes to local repository
+  .notice
+    $ git commit -am "changed some files"
+
+  %p
+  6. Merge the branch
+  .notice
+    $ git checkout master
+    %br
+    $ git merge modified-linux
+
+  %p
+  7. Update from the original repo
+  .notice
+    $ git fetch upstream master
+    %br
+    $ git merge upstream/master
+
+  %p
+  8. Commit to Github
+  .notice
+    $ git push origin master
+
+  %p
+  9. Wishing to contribute
+  %br 
+    Send pull request to the author in Github.
+
+  %p

@@ -7,6 +7,10 @@ gem 'haml-rails'
 gem 'compass'
 gem 'jquery-rails'
 gem 'httparty'
+gem 'coderay'
+gem 'ckeditor', "~> 3.6.0"
+gem 'paperclip'
+
 
 group :development do
   gem 'annotate'

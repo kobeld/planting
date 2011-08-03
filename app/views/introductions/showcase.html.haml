@@ -1,0 +1,49 @@
+%h4.box
+  TSP is a new thing and not easy to describe in English, so I will use Chinese to introduce.
+
+%h3 Foryou TSP 服务平台 (Telematics Service Provider Platform)
+%h4
+  %span.indent_c 华阳TSP服务平台是华阳将3G无线通信及互联网服务融进汽车电子行业，提供一键导航、车载通讯、驾驶辅助、移动商务、信息娱乐、LBS等多种服务的车载信息系统。
+  %br/
+  %span.indent_c TSP服务平台由终端设备、服务支撑平台，用户网站系统，坐席系统四部分组成。
+
+= image_tag "overview.png", :title => "TSP overview"
+
+%h3 Foryou TSP坐席系统 (TSP Operator System)
+
+%h4
+  %span.indent_c TSP坐席系统构建于华阳客户服务中心、由专属坐席人员来为车主提供365*24小时的不间断语音服务，其中包括POI点查询与目的地发送、TMC实时路况监测以及道路救援等。当用户有需要导航时，只需轻点“一键导航”按钮，车载终端系统便会自动拨通客服中心。此时车主只需说出目的地，坐席人员将远程协助设定，并将信息发回至用户的车载导航系统，不用停车，不用手动输入，即可轻松享受便捷导航。
+    
+= image_tag "portal.png", :title => "Main page of TSP operator system"
+
+%h4
+  %span.indent_c 整个TSP坐席系统采用分层结构设计，从上到下依次分为应用层、表现层、业务逻辑层、持久化层、资源和数据层。应用层面向坐席服务人员，使其通过操作坐席软件客户端来为呼入的车载用户提供服务；表现层主要处理前端页面的展现，将不同系统功能的内容，如GIS地图、当前呼入用户资料与服务状态等组合到一起呈现；业务逻辑层主要是处理业务逻辑，获取各种资源与持久层数据，经过逻辑封装以供表现层调用；持久层主要是对数据进行封装，以便内部进行逻辑处理；资源层包含各种系统服务资源，为上层提供基础的数据服务。
+
+= image_tag "architecture.png", :title => "Architecture of TSP operator system"
+
+.list_box
+  %dl
+    %dt Architecture:
+    %dd Edge Java EE 6 including JSF2, EJB3.1 and JPA2
+    
+    %dt Front-end:
+    %dd Primefaces, JQuery, DWR, CSS, Javascript
+    
+    %dt 3th party API:
+    %dd Google map API & Local search API, MapAbc API, Baidu map API
+    
+    %dt Web Service: 
+    %dd Jaxen RESTful web service
+    
+    %dt Server:
+    %dd Glassfish V3, Tomcat
+    
+    %dt Database:
+    %dd MySQL, Oracle
+    
+    %dt GIS Server:
+    %dd ArcGIS Server 9.3 for Java
+    
+    %dt IDE:
+    %dd NetBeans 6.9, MyEclipse 8.5
+    

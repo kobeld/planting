@@ -1,0 +1,11 @@
+%h4.box Use one of these languages Ruby／Python／Objective C／C／Google Go, Write a program to read text file of 2000 lines, and do sort on the first character of the each line, and write to a new text file.
+
+%h4
+  Ruby code:
+
+%h4.notice
+  File.open("new.txt", "w") do |file|
+  %br
+    %span.indent
+      file.puts File.readlines("2000Lines.txt").sort_by{ |line| line[0]}
+  end

@@ -1,0 +1,83 @@
+%h4.box
+  Use one of Ruby／Python／Objective C／C／Google Go + Google API to print the weather report of Hangzhou of the day after tomorrow
+
+#mapRegion
+
+%h4
+  For the sake of conenience, I use httparty gem instead of raw ruby net::http class to make http easy.
+  .notice
+    class Weather
+    %ul.code
+      %li include HTTParty
+      %li base_uri 'http://www.google.com/ig/api?weather=' 
+    end
+    
+  .notice
+    def google_api
+    %ul.code
+      %li results = Weather.get('Hangzhou')
+      %li @current = results["xml_api_reply"]["weather"]["current_conditions"]
+      %li @forecasts = results["xml_api_reply"]["weather"]["forecast_conditions"]
+    end
+
+#weather_div
+  %h3
+    The Plant
+    %span{:style => "font-size: 0.7em; color: gray"} in Hangzhou
+  
+  %div{:style => "float:left"}
+    = image_tag "http://www.google.com/#{raw @current["icon"]["data"]}"
+
+  %div{:style => "float:left; font-size:2em; margin: 0 0.5em; height:50px"}
+    = "#{@current["temp_c"]["data"]} °C"
+
+  %div
+    = "Current: #{@current["condition"]["data"]}"
+    %br
+    = "Wind: #{@current["wind_condition"]["data"]}"
+    %br
+    = "Humidity: #{@current["humidity"]["data"]}"
+
+  - @forecasts.each do |forecast|
+    %div{:style => "float:left; text-align: center; margin-right: 2em"} 
+      = forecast["day_of_week"]["data"]
+      %br
+      = image_tag "http://www.google.com/#{raw forecast["icon"]["data"]}"
+      %br
+      = "#{convert_fahrenheit(forecast["low"]["data"].to_i)}° | "
+      = "#{convert_fahrenheit(forecast["high"]["data"].to_i)}°"
+
+
+:plain
+  <script src="http://ditu.google.cn/maps/api/js?v=3&sensor=false" 
+      type="text/javascript"></script>
+
+:javascript
+  $(function(){
+    var popup_content = $("#weather_div").html();
+    var phantLatlng = new google.maps.LatLng(30.273375, 120.137303);
+    var mapCenter = new google.maps.LatLng(30.315, 120.137303);
+    var myOptions = {
+      zoom: 12,
+      center: mapCenter,
+      streetViewControl: false,
+      scaleControl: false,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    }
+    var map = new google.maps.Map(document.getElementById("mapRegion"), myOptions);
+    new google.maps.Marker({
+      map: map,
+      position: phantLatlng
+    });
+    
+    var poiMarker = new google.maps.Marker({
+      position: phantLatlng,
+      map: map
+    });
+  
+    var poiInfoWindow = new google.maps.InfoWindow({
+      content:popup_content
+    });
+
+    poiInfoWindow.open(map,poiMarker);
+  });

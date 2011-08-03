@@ -1,4 +1,22 @@
 Planting::Application.routes.draw do
+  
+  root :to => "answers#home"
+  
+  match 'answers/linux' => 'answers#linux', :as => "linux"
+  match 'answers/git' => 'answers#git', :as => "git"
+  match 'answers/css' => 'answers#css_usage', :as => "css"
+  match 'answers/weather' => 'answers#google_api', :as => "weather"
+  match 'answers/files' => 'answers#files_operations', :as => "files"
+  match 'answers/users' => 'answers#duplicated_users', :as => "dup_users"
+  
+  match 'introductions/why' => 'introductions#why', :as => "why"
+  match 'introductions/basic_info' => 'introductions#basic_info', :as => "basic_info"
+  match 'introductions/showcase' => 'introductions#showcase', :as => "showcase"
+  
+  match 'users/delete_duplicate' => 'users#delete_duplicate', :as => 'delete_duplicate'  
+  
+  resources :users
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -1,0 +1,12 @@
+= form_for @user, :remote => true do |f|
+  .field
+    = f.label :email, "Email"
+    = f.text_field :email
+  
+    .field
+    = f.label :name, "Name"
+    = f.text_field :name
+  
+    .actions
+    = f.submit "Add" 
+  

@@ -2,10 +2,17 @@
 %html
   %head
     %title Planting
-    = stylesheet_link_tag :all
-    = javascript_include_tag :defaults
     = csrf_meta_tag
+    = render 'layouts/stylesheets'
+    = javascript_include_tag :defaults
   
-  %body
-    = yield
-
+  %body.bp.two-col
+    #container
+      #header
+        = render "layouts/header"
+          
+      #sidebar
+        = render "layouts/sidebar"
+      #content
+        = yield
+      
