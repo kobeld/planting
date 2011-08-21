@@ -14,24 +14,27 @@
 @import compass/css3/border-radius
 
 body.bp.two-col
+  #header
+    background-color: #C52F24
+    padding: 30px 0
+    width: 100%
+    .title
+      font: 3em bold
+      color: white
+      text-align: center
+    ul
+      text-align: right
+      margin: 0
+      li
+        +border-radius
+        list-style-type: none
+        display: inline-block
+        margin: 0.5em
+        background-color: #cff  
   #container
-    #header
-      .title
-        font: 3em bold
-        color: red
-        text-align: center
-        margin-top: 1em
-      ul
-        text-align: right
-        margin: 0
-        li
-          +border-radius
-          list-style-type: none
-          display: inline-block
-          margin: 0.5em
-          background-color: #cff
     #sidebar
       text-align: right
+      margin-top: 10px
       margin-right: -1px
       
       ul
@@ -46,11 +49,13 @@ body.bp.two-col
           a
             text-decoration: none
             font-weight: normal
-            color: black
+            color: #444
+            background-color: white
             &:hover
               color: red
               font-weight: bold
     #content
+      margin-top: 30px
       #mapRegion
         width: 100%
         height: 480px
@@ -92,10 +97,11 @@ body.bp.two-col
             padding: 5px
             border-bottom: 1px gray dashed
       .list_box
-        font-size: 1.3em
+        width: 100%
+        font-size: 1.2em
         dl
           float: left
-          margin: 2em
+          margin: 0.2em 0 1em 2em
           padding: 0
           dt
             clear: both
@@ -105,3 +111,24 @@ body.bp.two-col
             float: left
             margin: 0
             padding: 0
+      .languages
+        float: right
+        margin-top: 0.8em
+        font-size: 0.6em
+        a
+          text-decoration: none
+          color: red
+          &:hover
+            background-color: white
+      .question_box
+        float: left
+        height: 1.5em
+        width: 1.5em
+        background-color: red
+        text-align: center
+        line-height: 1.5em
+        font-weight: bold
+        font-size: 1.3em
+        padding: 0
+        margin: -1.5em 0 0 -1.5em
+        color: white

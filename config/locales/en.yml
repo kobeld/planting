@@ -2,4 +2,41 @@
 # See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  basic_info:
+    name: Dong Liang
+    lang: "Change language:" 
+    lable:
+      gender: Gender
+      birthday: Date of birth
+      location: Current location
+      work_experience: Work experience
+      education: Education
+      university: University
+      degree: Degree
+      major: Major
+      english: English
+      current_job: Current Job
+      company: Company
+      department: Department
+      project: Project
+      position: Position
+      role: Role
+      technical_skills: Technical Skills
+      contact_me: Contact Me
+      mobile: Mobile
+      others: Others
+    content:
+      gender: male
+      birthday: 1984-03
+      location: Huizhou, Guangdong
+      work_experience: 3 years
+      university: Northeastern University (2004-2008)
+      degree: Bachelor of Engineering
+      major: Software Engineering
+      english: Passed CET-6 with good communication skills
+      company: Huizhou Foryou General Electronics Co.,Ltd
+      department: Advanced Technology Department
+      project: Foryou TSP(Telematics Service Provider) Platform
+      position: Java Engineer
+      role: Team Leader of TSP Operator System(sub-system of TSP)
+      

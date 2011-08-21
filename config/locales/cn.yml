@@ -1,0 +1,39 @@
+
+cn:
+  basic_info:
+    name: 梁  东
+    lang: "切换语言:"
+    label:
+      gender: 性 别
+      birthday: 生 日
+      location: 所在地
+      work_experience: 工作经验
+      education: 教育背景
+      university: 毕业学校
+      degree: 学 历
+      major: 专 业
+      english: 英语能力
+      current_job: 当前工作
+      company: 公 司
+      department: 部 门
+      project: 项 目
+      position: 职 位
+      role: 角 色
+      technical_skills: 掌握技术
+      contact_me: 联系方式
+      mobile: 手 机
+      others: 其 他
+    content:
+      gender: 男
+      birthday: 1984-03
+      location: 广东惠州
+      work_experience: 3年
+      university: 东北大学 (2004-2008)
+      degree: 本科
+      major: 软件工程
+      english: 6级，可作为日常工作语言
+      company: 华阳通用电子有限公司
+      department: 技术发展部
+      project: 华阳TSP(车载信息服务)平台
+      position: Java工程师
+      role: 华阳TSP坐席服务系统负责人

@@ -1,20 +1,29 @@
 
-%h4.box
-  You can only operate on one local Linux system, Please write a command to copy a local file to a remote linux server, and the command for remove it
+%h4
+  .box
+    .question_box Q 
+    You can only operate on one local Linux system, Please write a command to copy a local file to a remote linux server, and the command for remove it
+
+.list_box.clearfix
+  Assumption:
+  %br/
+  %dl
+    %dt local file: 
+    %dd ~/doc/abc.txt
+    %dt server name: 
+    %dd kobeld
+    %dt server address: 
+    %dd 192.168.1.100
+    %dt target directory: 
+    %dd /files/
 
 %h4
-  Assume:
-
-  %br local file: ~/doc/abc.txt
-  server name: kobeld 
-  %br server address: 192.168.1.100
-  target directory: /files/
-
   %p
-  1. Copy a local file to remote linux server
+    1. Copy a local file to remote linux server
   .notice
     $ scp ~/doc/abc.txt kobeld@192.168.1.100:/files/
 
-  2. Delete the local file
+  %p
+    2. Delete the local file
   .notice
     $ rm ~/doc/abc.txt

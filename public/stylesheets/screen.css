@@ -501,17 +501,21 @@ body.two-col #container {
   *zoom: 1;
 }
 /* line 27, ../../app/stylesheets/partials/_two_col.sass */
-body.two-col #header, body.two-col #footer {
+body.two-col #header {
+  width: 100%;
+}
+/* line 29, ../../app/stylesheets/partials/_two_col.sass */
+body.two-col #footer {
   display: inline;
   float: left;
   margin-right: 10px;
   width: 950px;
 }
 /* line 147, ../../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html body.two-col #header, * html body.two-col #footer {
+* html body.two-col #footer {
   overflow-x: hidden;
 }
-/* line 29, ../../app/stylesheets/partials/_two_col.sass */
+/* line 31, ../../app/stylesheets/partials/_two_col.sass */
 body.two-col #sidebar {
   display: inline;
   float: left;
@@ -522,7 +526,7 @@ body.two-col #sidebar {
 * html body.two-col #sidebar {
   overflow-x: hidden;
 }
-/* line 33, ../../app/stylesheets/partials/_two_col.sass */
+/* line 35, ../../app/stylesheets/partials/_two_col.sass */
 body.two-col #content {
   display: inline;
   float: left;
@@ -534,20 +538,25 @@ body.two-col #content {
   overflow-x: hidden;
 }
 
-/* line 19, ../../app/stylesheets/screen.sass */
-body.bp.two-col #container #header .title {
-  font: 3em bold;
-  color: red;
-  text-align: center;
-  margin-top: 1em;
+/* line 17, ../../app/stylesheets/screen.sass */
+body.bp.two-col #header {
+  background-color: #c52f24;
+  padding: 30px 0;
+  width: 100%;
 }
-/* line 24, ../../app/stylesheets/screen.sass */
-body.bp.two-col #container #header ul {
+/* line 21, ../../app/stylesheets/screen.sass */
+body.bp.two-col #header .title {
+  font: 3em bold;
+  color: white;
+  text-align: center;
+}
+/* line 25, ../../app/stylesheets/screen.sass */
+body.bp.two-col #header ul {
   text-align: right;
   margin: 0;
 }
-/* line 27, ../../app/stylesheets/screen.sass */
-body.bp.two-col #container #header ul li {
+/* line 28, ../../app/stylesheets/screen.sass */
+body.bp.two-col #header ul li {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   -o-border-radius: 5px;
@@ -559,80 +568,86 @@ body.bp.two-col #container #header ul li {
   margin: 0.5em;
   background-color: #ccffff;
 }
-/* line 33, ../../app/stylesheets/screen.sass */
+/* line 35, ../../app/stylesheets/screen.sass */
 body.bp.two-col #container #sidebar {
   text-align: right;
+  margin-top: 10px;
   margin-right: -1px;
 }
-/* line 37, ../../app/stylesheets/screen.sass */
+/* line 40, ../../app/stylesheets/screen.sass */
 body.bp.two-col #container #sidebar ul {
   padding: 0 1em 0 0;
   margin: 0 1em 0 0;
   font-size: 1.7em;
   border-right: solid #dddddd 1px;
 }
-/* line 42, ../../app/stylesheets/screen.sass */
+/* line 45, ../../app/stylesheets/screen.sass */
 body.bp.two-col #container #sidebar ul li {
   list-style-type: none;
   color: red;
   font-weight: bold;
 }
-/* line 46, ../../app/stylesheets/screen.sass */
+/* line 49, ../../app/stylesheets/screen.sass */
 body.bp.two-col #container #sidebar ul li a {
   text-decoration: none;
   font-weight: normal;
-  color: black;
+  color: #444444;
+  background-color: white;
 }
-/* line 50, ../../app/stylesheets/screen.sass */
+/* line 54, ../../app/stylesheets/screen.sass */
 body.bp.two-col #container #sidebar ul li a:hover {
   color: red;
   font-weight: bold;
 }
-/* line 54, ../../app/stylesheets/screen.sass */
+/* line 57, ../../app/stylesheets/screen.sass */
+body.bp.two-col #container #content {
+  margin-top: 30px;
+}
+/* line 59, ../../app/stylesheets/screen.sass */
 body.bp.two-col #container #content #mapRegion {
   width: 100%;
   height: 480px;
 }
-/* line 57, ../../app/stylesheets/screen.sass */
+/* line 62, ../../app/stylesheets/screen.sass */
 body.bp.two-col #container #content ul.code {
   padding: 0;
   margin: 0 0 0 1em;
   list-style-type: none;
 }
-/* line 62, ../../app/stylesheets/screen.sass */
+/* line 67, ../../app/stylesheets/screen.sass */
 body.bp.two-col #container #content #weather_div {
   display: none;
 }
-/* line 64, ../../app/stylesheets/screen.sass */
+/* line 69, ../../app/stylesheets/screen.sass */
 body.bp.two-col #container #content span.indent {
   margin-left: 1em;
 }
-/* line 66, ../../app/stylesheets/screen.sass */
+/* line 71, ../../app/stylesheets/screen.sass */
 body.bp.two-col #container #content span.indent_c {
   margin-left: 2em;
 }
-/* line 68, ../../app/stylesheets/screen.sass */
+/* line 73, ../../app/stylesheets/screen.sass */
 body.bp.two-col #container #content #all_users {
   float: left;
   width: 300px;
 }
-/* line 71, ../../app/stylesheets/screen.sass */
+/* line 76, ../../app/stylesheets/screen.sass */
 body.bp.two-col #container #content #delete_duplicate {
   float: right;
   width: 300px;
 }
-/* line 74, ../../app/stylesheets/screen.sass */
+/* line 79, ../../app/stylesheets/screen.sass */
 body.bp.two-col #container #content .basic_info {
   background: white;
   font-size: 1.2em;
 }
-/* line 77, ../../app/stylesheets/screen.sass */
+/* line 82, ../../app/stylesheets/screen.sass */
 body.bp.two-col #container #content .basic_info dl {
   float: left;
   margin: 0;
   padding: 0;
 }
-/* line 81, ../../app/stylesheets/screen.sass */
+/* line 86, ../../app/stylesheets/screen.sass */
 body.bp.two-col #container #content .basic_info dl dt {
   clear: both;
   float: left;
@@ -641,7 +656,7 @@ body.bp.two-col #container #content .basic_info dl dt {
   width: 150px;
   border-bottom: 1px gray dashed;
 }
-/* line 88, ../../app/stylesheets/screen.sass */
+/* line 93, ../../app/stylesheets/screen.sass */
 body.bp.two-col #container #content .basic_info dl dd {
   float: left;
   width: 400px;
@@ -649,25 +664,55 @@ body.bp.two-col #container #content .basic_info dl dd {
   padding: 5px;
   border-bottom: 1px gray dashed;
 }
-/* line 94, ../../app/stylesheets/screen.sass */
+/* line 99, ../../app/stylesheets/screen.sass */
 body.bp.two-col #container #content .list_box {
-  font-size: 1.3em;
+  width: 100%;
+  font-size: 1.2em;
 }
-/* line 96, ../../app/stylesheets/screen.sass */
+/* line 102, ../../app/stylesheets/screen.sass */
 body.bp.two-col #container #content .list_box dl {
   float: left;
-  margin: 2em;
+  margin: 0.2em 0 1em 2em;
   padding: 0;
 }
-/* line 100, ../../app/stylesheets/screen.sass */
+/* line 106, ../../app/stylesheets/screen.sass */
 body.bp.two-col #container #content .list_box dl dt {
   clear: both;
   float: left;
   width: 130px;
 }
-/* line 104, ../../app/stylesheets/screen.sass */
+/* line 110, ../../app/stylesheets/screen.sass */
 body.bp.two-col #container #content .list_box dl dd {
   float: left;
   margin: 0;
   padding: 0;
+}
+/* line 114, ../../app/stylesheets/screen.sass */
+body.bp.two-col #container #content .languages {
+  float: right;
+  margin-top: 0.8em;
+  font-size: 0.6em;
+}
+/* line 118, ../../app/stylesheets/screen.sass */
+body.bp.two-col #container #content .languages a {
+  text-decoration: none;
+  color: red;
+}
+/* line 121, ../../app/stylesheets/screen.sass */
+body.bp.two-col #container #content .languages a:hover {
+  background-color: white;
+}
+/* line 123, ../../app/stylesheets/screen.sass */
+body.bp.two-col #container #content .question_box {
+  float: left;
+  height: 1.5em;
+  width: 1.5em;
+  background-color: red;
+  text-align: center;
+  line-height: 1.5em;
+  font-weight: bold;
+  font-size: 1.3em;
+  padding: 0;
+  margin: -1.5em 0 0 -1.5em;
+  color: white;
 }

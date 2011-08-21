@@ -1,69 +1,99 @@
 .box
   %h2 
-    %strong Dong Liang
+    %strong= t("basic_info.name")
+    .languages
+      = t("basic_info.lang")
+      = language_selecotr
   .basic_info.clearfix
     %dl      
-      %dt Gender
-      %dd male
+      %dt= t("basic_info.label.gender")
+      %dd= t("basic_info.content.gender")
       
-      %dt Date of birth
+      %dt= t("basic_info.label.birthday")
       %dd 1984-03
       
-      %dt Current location
-      %dd Huizhou, Guangdong
+      %dt= t("basic_info.label.location")
+      %dd= t("basic_info.content.location")
       
-      %dt Work experience 
-      %dd 3 years
+      %dt= t("basic_info.label.work_experience")
+      %dd= t("basic_info.content.work_experience")
   
   %p
-  %h3.quiet Education
+  %h3.quiet= t("basic_info.label.education")
   .basic_info.clearfix
     %dl
-      %dt University
-      %dd Notheastern University (2004-2008)
+      %dt= t("basic_info.label.university")
+      %dd 
+        = link_to t("basic_info.content.university"), "http://www.neu.edu.cn", :target => "_blank"
       
-      %dt Degree
-      %dd Bachelor of Engineering
+      %dt= t("basic_info.label.degree")
+      %dd= t("basic_info.content.degree")
       
-      %dt Major
-      %dd Software Engineering
+      %dt= t("basic_info.label.major")
+      %dd= t("basic_info.content.major")
       
-      %dt English
-      %dd CET-6
+      %dt= t("basic_info.label.english")
+      %dd= t("basic_info.content.english")
   
   %p    
-  %h3.quiet Current job
+  %h3.quiet= t("basic_info.label.current_job")
   .basic_info.clearfix
     %dl
-      %dt Company
+      %dt= t("basic_info.label.company")
       %dd
-        = link_to "Huizhou Foryou General Electronics Co.,Ltd", "http://www.foryouge.com", :target => "_blank"
+        = link_to t("basic_info.content.company"), "http://www.foryouge.com", :target => "_blank"
       
-      %dt Department
-      %dd Advanced Technology Department
+      %dt= t("basic_info.label.department")
+      %dd= t("basic_info.content.department")
       
-      %dt Project
-      %dd Foryou TSP(Telematics Service Provider) Platform
+      %dt= t("basic_info.label.project")
+      %dd 
+        = link_to t("basic_info.content.project"), showcase_path
       
-      %dt Position
-      %dd Java Engineer
+      %dt= t("basic_info.label.position")
+      %dd= t("basic_info.content.position")
       
-      %dt Role
-      %dd Team Leader of TSP Operator System(sub-system of TSP)
+      %dt= t("basic_info.label.role")
+      %dd= t("basic_info.content.role")
+  %p
+  %h3.quiet= t("basic_info.label.technical_skills")
+  .basic_info.clearfix
+    %dl
+      %dt Ruby
+      %dd Ruby on Rails, Haml, Sass/Scss, CoffeeScript
+      
+      %dt CSS
+      %dd Compass, Blueprint
+      
+      %dt Javascript
+      %dd JQuery
+      
+      %dt Java
+      %dd Java EE Architecture including JSF, EJB, JPA, Spring etc.
+      
+      %dt Linux
+      %dd Mac OS, Ubuntu
+      
+      %dt Editor/IDE
+      %dd Textmate, Netbeans, Eclipse/MyEclipse
+      
+      %dt Tools
+      %dd Axure, MindManager, CorelDraw, PhotoShop, MS Visio etc.
+
   %p    
-  %h3.quiet Contact me
+  %h3.quiet= t("basic_info.label.contact_me")
   .basic_info.clearfix
     %dl
       %dt Email
       %dd kobeld@163.com
       
-      %dt Mobile
+      %dt= t("basic_info.label.mobile")
       %dd 18665260755
       
       %dt QQ
       %dd 149999265
       
-      %dt Others
+      %dt= t("basic_info.label.others")
       %dd
         = link_to "weibo", "http://weibo.com/kobeld", :target => "_blank"
         = " | "

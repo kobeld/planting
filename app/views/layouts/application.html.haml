@@ -7,10 +7,9 @@
     = javascript_include_tag :defaults
   
   %body.bp.two-col
+    #header
+      = render "layouts/header"  
     #container
-      #header
-        = render "layouts/header"
-          
       #sidebar
         = render "layouts/sidebar"
       #content

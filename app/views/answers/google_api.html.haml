@@ -1,7 +1,9 @@
 %h4.box
+  .question_box Q  
   Use one of Ruby／Python／Objective C／C／Google Go + Google API to print the weather report of Hangzhou of the day after tomorrow
 
 #mapRegion
+%p
 
 %h4
   For the sake of conenience, I use httparty gem instead of raw ruby net::http class to make http easy.
@@ -19,7 +21,7 @@
       %li @current = results["xml_api_reply"]["weather"]["current_conditions"]
       %li @forecasts = results["xml_api_reply"]["weather"]["forecast_conditions"]
     end
-
+  
 #weather_div
   %h3
     The Plant
