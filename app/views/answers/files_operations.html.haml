@@ -5,9 +5,9 @@
 %h4
   Ruby code:
 
-%h4.notice
-  File.open("new.txt", "w") do |file|
-  %br
-    %span.indent
-      file.puts File.readlines("2000Lines.txt").sort_by{ |line| line[0]}
-  end
+  .notice
+    File.open("new.txt", "w") do |file|
+    %br
+      %span.indent
+        file.puts File.readlines("2000Lines.txt").sort_by{ |line| line[0]}
+    end

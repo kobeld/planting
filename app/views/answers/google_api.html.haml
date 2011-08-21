@@ -1,12 +1,16 @@
-%h4.box
-  .question_box Q  
-  Use one of Ruby／Python／Objective C／C／Google Go + Google API to print the weather report of Hangzhou of the day after tomorrow
+%h4
+  .box
+    .question_box Q  
+    Use one of Ruby／Python／Objective C／C／Google Go + Google API to print the weather report of Hangzhou of the day after tomorrow
 
 #mapRegion
 %p
 
 %h4
-  For the sake of conenience, I use httparty gem instead of raw ruby net::http class to make http easy.
+  For the sake of conenience, I use 
+  = link_to "httparty gem", "https://github.com/jnunemaker/httparty", :target => "_blank" 
+  instead of raw ruby net::http class to make http easy.
+  %p
   .notice
     class Weather
     %ul.code

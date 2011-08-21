@@ -5,7 +5,7 @@
     You can only operate on one local Linux system, Please write a command to copy a local file to a remote linux server, and the command for remove it
 
 .list_box.clearfix
-  Assumption:
+  Assumptions:
   %br/
   %dl
     %dt local file: 
@@ -17,13 +17,13 @@
     %dt target directory: 
     %dd /files/
 
+
 %h4
-  %p
-    1. Copy a local file to remote linux server
+  1. Copy a local file to remote linux server
   .notice
     $ scp ~/doc/abc.txt kobeld@192.168.1.100:/files/
 
   %p
-    2. Delete the local file
+  2. Delete the local file
   .notice
     $ rm ~/doc/abc.txt

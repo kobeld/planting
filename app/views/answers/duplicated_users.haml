@@ -6,6 +6,11 @@
     
 
 %h4
+  %p 
+    Following is the demo(using ajax) which you could add any user and finally delete duplicated users. 
+    = button_to "Delete duplicate", delete_duplicate_path(:format => :js), |
+      :method => :post, :remote => true
+      
   .clearfix
     #all_users.notice
       %table
@@ -17,8 +22,7 @@
           %tr
             %th ID
             %th Name
-            %th Email
-      
+            %th Email      
           = render @users
     
     #delete_duplicate.notice
@@ -37,12 +41,14 @@
 
   = link_to "new user", new_user_path(:format => :js), :remote => true, :id => "new_user_link"
   
-  %br
-  = button_to "delete duplicate", delete_duplicate_path(:format => :js), |
-    :method => :post, :remote => true
+  
+  %p
+  Main ruby code:
+  .notice 
+    User.delete_all(["id NOT IN (?)", User.select('min(id) as id').group(:email).map(&:id)])
   
   %br
-    .notice 
-      User.delete_all(["id NOT IN (?)", User.select('min(id) as id').group(:email).map(&:id)])
   
-  
+  .box 
+    .question_box N
+    While I'm using the free hosting service of Heroku, the processing speed may be not so well. Please be patient after doing some operations.

@@ -1,24 +1,39 @@
-%h3
-  Hi, my name is Dong Liang. 
-  The regular way of answering the tests is boring. So I took some time to build this small site to make it more funny and interactive.
-   
-      
-.list_box.clearfix
-  This site is built with Rails 3.0.9 and ...
-  %br/
-  %dl
-    %dt CSS framework: 
-    %dd Compass
-    %dt View template:
-    %dd Haml
-    %dt JS library:
-    %dd JQuery
-    %dt API resources:
-    %dd Google Map/Weather API
-    %dt Editor: 
-    %dd Textmate
-    %dt Hosting:
-    %dd Heroku
-    %dt Github: 
-    %dd= link_to "https://github.com/kobeld/planting" 
+%h4
+  .box
+    .question_box
+      Hi
+    %h3 
+      My name is 
+      = link_to "Dong Liang", basic_info_path
+      = "."
     
+    The regular way of answering  
+    = link_to "the Plant test ", "http://tinyurl.com/theplant-test", :target => "_blank"
+    is boring. So I took some time to build this small site to make it more funny and interactive.
+    
+    %p
+    Also, though I'm not an experienced ROR developer(but Java field), this represents my sincere heart that I'm looking forward to make web development base upon Ruby on Rails to be my career path.
+    
+    %p
+    Finally, in my opinion, programming using Ruby/Rails is really happy. Just like what Matz says... XD 
+  .list_box.clearfix
+    This site is built with 
+    %strong Rails 3.0.9 
+    and ...
+    %br/
+    %dl
+      %dt CSS framework: 
+      %dd Compass
+      %dt View template:
+      %dd Haml
+      %dt JS library:
+      %dd JQuery
+      %dt API resources:
+      %dd Google Map/Weather API
+      %dt Editor: 
+      %dd Textmate
+      %dt Hosting:
+      %dd Heroku
+      %dt Github: 
+      %dd= link_to "https://github.com/kobeld/planting" 
+

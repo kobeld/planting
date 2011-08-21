@@ -22,15 +22,6 @@ body.bp.two-col
       font: 3em bold
       color: white
       text-align: center
-    ul
-      text-align: right
-      margin: 0
-      li
-        +border-radius
-        list-style-type: none
-        display: inline-block
-        margin: 0.5em
-        background-color: #cff  
   #container
     #sidebar
       text-align: right
@@ -54,6 +45,16 @@ body.bp.two-col
             &:hover
               color: red
               font-weight: bold
+    #footer
+      padding: 30px 0
+      color: #666
+      ul
+        text-align: center
+        margin: 0
+        li
+          list-style-type: none
+          display: inline-block
+          margin: 0.5em
     #content
       margin-top: 30px
       #mapRegion
@@ -93,12 +94,12 @@ body.bp.two-col
           dd
             float: left
             width: 400px
-            margin: 0
+            margin: 0px
             padding: 5px
             border-bottom: 1px gray dashed
       .list_box
         width: 100%
-        font-size: 1.2em
+        font-size: 1.1em
         dl
           float: left
           margin: 0.2em 0 1em 2em
@@ -107,10 +108,14 @@ body.bp.two-col
             clear: both
             float: left
             width: 130px
+            padding: 0
+            margin-top: 3px
+            font-weight: normal
           dd
             float: left
-            margin: 0
+            margin-top: 3px
             padding: 0
+            font-weight: bold
       .languages
         float: right
         margin-top: 0.8em
